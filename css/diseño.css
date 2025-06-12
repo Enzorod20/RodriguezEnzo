@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Tarjetas de los Pokémon */
+.pokemon-card {
+    position: relative;
+    transition: background-color 0.9s ease;
+    display: inline-block;
+    width: 250px; /* Ajustamos el ancho de la tarjeta */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid yellow; /* Borde amarillo */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px black, 0 0 0 6px yellow, 0 0 0 8px black; /* Borde negro interno y externo */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Input en la parte superior de la tarjeta */
+.pokemon-card input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px; /* Espacio entre el input y la imagen */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Imagen del Pokémon */
+.pokemon-card img {
+    position: relative;
+    top: 0;
+    width: 120px; /* Tamaño de la imagen */
+    height: auto;
+    z-index: 1;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra para el efecto de relieve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
+    padding: 5px; /* Espaciado interno para el fondo translúcido */
+}
+
+/* Efecto hover en la imagen */
+.pokemon-card img:hover {
+    transform: translateY(-10px) scale(1.05); /* Flota y se agranda ligeramente */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Ajuste del contenido de la tarjeta */
+.pokemon-card h3,
+.pokemon-card p {
+    margin: 5px 0; /* Reducimos el margen entre los elementos */
+}
+
+/* ID en la esquina superior derecha */
+.pokemon-card .pokemon-id {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para el efecto 3D */
+}
+
+/* Contenedor del botón de batalla */
+.battle-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Botón de batalla */
+.battle-button {
+    display: inline-block;
+    margin-top: 10px; /* Reducimos el margen superior */
+    padding: 10px 20px; /* Reducimos el tamaño del botón */
+    font-size: 16px; /* Reducimos el tamaño del texto */
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.battle-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Contenedor del resultado */
+#resultado {
+    margin-top: 20px; /* Reducimos el margen superior */
+    font-size: 20px; /* Reducimos el tamaño del texto */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contenedor de los equipos */
+.teams-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Equipo */
+.team {
+    text-align: center;
+}
+
+/* Título del equipo */
+.team h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dice-button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0074D9;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.dice-button:hover:enabled {
+    background-color: #005fa3;
+    transform: scale(1.08);
+}
+
+.dice-button:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.ganador {
+    color: #fff;
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    border-radius: 8px;
+    padding: 12px 0;
+    margin: 20px auto 0 auto;
+    width: 60%;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px #333;
+    transition: background 0.3s;
+}

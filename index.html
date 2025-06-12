@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo</title>
+    <link rel="stylesheet" href="css/diseño.css">
+</head>
+<body>
+    <h1>batalla</h1>
+
+
+
+<div class="teams-container">
+        <div class="team" id="team1">
+            <h2>equipo 1</h2>
+            <div id="pokemon1"></div>
+        </div>
+        <div class="team" id="team2">
+        <h2>equipo 2</h2>
+        <div id="pokemon2"></div>
+        </div>
+</div>
+
+
+<div class="battle-container">
+    <button class="battle-button" id="iniciar-batalla" onclick="battle()" disabled>Batalla pokemon</button>
+</div>
+   <div id="resultado"></div>
+
+   <div id="dados-container">
+    <button id="tirar-dados-1" class="dice-button" onclick="tiradado(1)">Tirar dados equipo 1</button>
+    <div id="dados-1"></div>
+    
+    <button id="tirar-dados-2" class="dice-button" onclick="tiradado(2)">Tirar dados equipo 2</button>
+    <div id="dados-2"></div>
+    
+   </div>
+   
+   
+   <script src="javascript\fn.js"></script>
+ 
+</body>
+</html>
