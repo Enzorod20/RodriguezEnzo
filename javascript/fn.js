@@ -1,8 +1,5 @@
 
-
-console.log("anda"); 
-
-function obtenerColorPorTipo(tipo){
+function obtenerColorPorTipo(tipo){ //lo uso para  poner un color de fondo a la tarjeta segun su tipo
     const colores ={
         electric: "#FFEA70",
         fire: "#F7786B",
@@ -24,6 +21,8 @@ function obtenerColorPorTipo(tipo){
     };
     return colores[tipo] || "#D3D3D3"
 }
+
+
 async function obtenerpokemon(id) {
     const response = await fetch (`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await response.json(); 
@@ -66,10 +65,7 @@ function cargarPokemon(equipo,containerId) {
     ).join('');
     }
 
-
-
-
-async function iniequipo() {
+async function iniciaequipo() {
     const idd = idrandom(6);
     equipo1=[];
     equipo2=[];
@@ -90,16 +86,14 @@ async function iniequipo() {
     document.getElementById("dados-1").innerHTML = "";
     document.getElementById("dados-2").innerHTML = "";
     document.getElementById("tirar-dados-1").disabled = true;
-    
     document.getElementById("tirar-dados-2").disabled = true;
-    
     document.getElementById("iniciar-batalla").disabled = false;
     document.getElementById("resultado").innerHTML = "";
 }
 
 async function tiradado(equipo) {
-    const d1 = Math.floor(Math.random()*6)+1;
-    const d2 = Math.floor(Math.random()*6)+1;
+    const d1 = Math.floor(Math.random()*6)+1;//dado1
+    const d2 = Math.floor(Math.random()*6)+1;//dado2
     const suma = d1 +d2;
     if (equipo === 1){
         dado1.push(suma);
@@ -174,4 +168,4 @@ function desempate(){
     document.getElementById("resultado").innerHTML= resultado;
 }
 
-window.addEventListener("DOMContentLoaded", iniequipo);
+window.addEventListener("DOMContentLoaded", iniciaequipo);
